@@ -153,6 +153,9 @@ function Metadata(sample) {
         // Get the first index from the array
         let valueData = value[0];
 
+        // Clear out metadata
+        d3.select("#sample-metadata").html("");
+
         // Use Object.entries to add each key/value pair to the panel
         Object.entries(valueData).forEach(([key,value]) => {
 
@@ -165,7 +168,7 @@ function Metadata(sample) {
 };
 
 // 6.	Update all the plots when a new sample is selected. 
-function updateDashboard(value) { 
+function optionChanged(value) { 
 
     // Log the new value
     console.log(value); 
